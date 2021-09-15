@@ -39,6 +39,7 @@
     margin-left: 10px;
     margin-right: 10px;
     color: white;
+    cursor: pointer;
 }
 .header__nav{
     display: flex;
@@ -62,4 +63,7 @@
     margin-left: 10px;
     margin-right: 10px;
     
+}
+.Link{
+     text-decoration: none;
 }
