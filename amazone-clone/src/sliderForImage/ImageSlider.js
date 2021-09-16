@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './ImageSlider.css'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -7,7 +7,15 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const ImageSlider = ({slides}) => {
 const [current , setCurrent] = useState(0);
+const [bool , setBool] = useState(false);
 const length = slides.length
+useEffect(() => {
+    setTimeout(()=>{
+    nextSlide();
+    setBool(!bool)
+    },6000)
+    
+},[bool]);
 if(!Array.isArray(slides) || slides.length<=0){
     return null
 }
