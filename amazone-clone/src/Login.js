@@ -36,7 +36,7 @@ const Login = () => {
     return (
         <div className="login">
             <Link to="/">
-                <img className="login__image" src="https://pluspng.com/img-png/amazon-alexa-logo-vector-png-amazon-logo-3030.png" ></img>
+                <img className="login__image" src="https://pluspng.com/img-png/amazon-alexa-logo-vector-png-amazon-logo-3030.png" alt="Amazon Logo" ></img>
             </Link>
             <div className="login__container">
                 <h1>Sign-In</h1>
