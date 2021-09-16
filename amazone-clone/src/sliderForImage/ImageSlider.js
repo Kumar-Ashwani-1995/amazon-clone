@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './ImageSlider.css'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import SkipNextIcon from '@material-ui/icons/SkipNext';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 const ImageSlider = ({slides}) => {
 const [current , setCurrent] = useState(0);
@@ -18,18 +20,18 @@ const prevSlide = ()=>{
 
     return (
         <section className="slider">
-            <ChevronLeftIcon className="slider__left" onClick={prevSlide}></ChevronLeftIcon>
+            <ArrowBackIosIcon className="slider__left" onClick={prevSlide}/>
             {slides.map((slide,index)=>{
                 return(
                     <div  className={index === current ? 'slide active' : 'slide'}
             key={index}>{index === current && (              
-                        <img className="home__image" src={slide.image} alt="Amazon adv"></img>
+                        <img className="image" src={slide.image} alt="Amazon adv"></img>
                     )}
                     </div>
                     
                 )
             })}
-            <ChevronRightIcon className="slider__right" onClick={nextSlide} ></ChevronRightIcon>
+            <ArrowForwardIosIcon className="slider__right" onClick={nextSlide} />
         </section>
     )
 }
