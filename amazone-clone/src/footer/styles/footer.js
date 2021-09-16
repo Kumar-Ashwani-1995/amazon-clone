@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: #131921;
-position: "absolute";
+position: "fixed";
+margin-bottom: -1400px;
   
 `;
 

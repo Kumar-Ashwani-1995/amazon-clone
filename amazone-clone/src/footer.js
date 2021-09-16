@@ -6,15 +6,19 @@ const linkStyle = {
   marginBottom:"20px",
 
  }
+ const buttonStyle = {
+  width: "100%",
+  height: "30px",
+  background: "#54595F"
+ }
 
 export function FooterContainer() {
-    return (
-        <Footer style= { {} }>
+    return (<><a href="#">
+            <button style= { buttonStyle }>Back to top</button>
+            </a>
+        <Footer >
             <img className="header__logo" style= { linkStyle } src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="AmaZon.com"></img>
             <Footer.Wrapper>
-                
-                
-           
             <Footer.Row>
                 <Footer.Column>
                 <Footer.Title>About Us</Footer.Title>
@@ -39,6 +43,6 @@ export function FooterContainer() {
                 
             </Footer.Row>
             </Footer.Wrapper>
-        </Footer>
+        </Footer></>
     )
 }

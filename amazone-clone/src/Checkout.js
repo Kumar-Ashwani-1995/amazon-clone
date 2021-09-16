@@ -26,7 +26,7 @@ const Checkout = () => {
                             ></CheckoutProduct>
                         </div>
                     ) :
-                        <div className="checkout">
+                        <div className="checkout__empty">
 
                             <img src={cartEmpty} alt="Empty cart"></img>
                             <h2 className="checkout__emptyText"> Your Amazon Basket is empty</h2>

@@ -42,23 +42,33 @@ function App() {
             <Login></Login>
           </Route>
           <Route path="/payment">
+            <div className="body">
             <Header></Header>
             <Payment></Payment>
+            </div>
+            <FooterContainer></FooterContainer>
           </Route>
           <Route path="/placedOrderPage">
+            <div className="body">
             <Header></Header>
             <OrderPlaced></OrderPlaced>
+            </div>
             <FooterContainer></FooterContainer>
           </Route>
           <Route path="/checkout">
+            <div className="body">
             <Header></Header>
             <Checkout></Checkout>
+            </div>
             <FooterContainer></FooterContainer>
           </Route>
           <Route path="/">
+            <div className="body">
             <Header></Header>
             <Home></Home>
+            </div>
             <FooterContainer></FooterContainer>
+
           </Route>
           
         </Switch>

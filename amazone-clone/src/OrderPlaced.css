@@ -2,12 +2,19 @@
   display: flex;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   border: 5px solid black;
   padding: 40px;
+}
+.orderPlaced {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+  padding-bottom: 500px;
 }
 
 .orderPlaced__image {
