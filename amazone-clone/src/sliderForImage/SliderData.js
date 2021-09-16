@@ -1,27 +1,26 @@
 
 
 const SliderData =[
+    
+    // {
+    //     image:process.env.PUBLIC_URL+"/img/Webp.net-resizeimage (2).jpg"
+    // },
     {
-        image:process.env.PUBLIC_URL+"ad4.jpg"
+        image:process.env.PUBLIC_URL+"/img/ad1.jpg"
     },
     {
-        image:process.env.PUBLIC_URL+"ad2.jpg"
+        image:process.env.PUBLIC_URL+"/img/Webp.net-resizeimage.jpg"
     },
     {
-        image:process.env.PUBLIC_URL+"ad1.jpg"
+        image:process.env.PUBLIC_URL+"/img/Webp.net-resizeimage (4).jpg"
     },
     {
-        image:process.env.PUBLIC_URL+"ad4.jpg"
-    },
-    {
-        image:process.env.PUBLIC_URL+"ad5.jpg"
-    },
-    {
-        image:process.env.PUBLIC_URL+"ad6.jpg"
-    },
-    {
-        image:process.env.PUBLIC_URL+"ad7.jpg"
+        image:process.env.PUBLIC_URL+"/img/Webp.net-resizeimage (1).jpg"
     }
+    // {
+    //     image:process.env.PUBLIC_URL+"/img/Webp.net-resizeimage (5).jpg"
+    // }
+    
 
 ]
 
