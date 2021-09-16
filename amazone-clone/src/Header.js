@@ -2,6 +2,8 @@ import React from 'react'
 import "./Header.css"
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
@@ -33,6 +35,7 @@ function Header() {
                         <span className="header__optionLine1">
                             {user.multiFactor.user.email.split("@")[0]}
                         </span>
+                        
                         <span className="header__optionLine2">
                             Sign Out
                         </span>
@@ -56,7 +59,7 @@ function Header() {
                         Return
                     </span>
                     <span className="header__optionLine2">
-                        & Order
+                        & Orders
                     </span>
                 </div>
                 <div className="header__option">
@@ -70,10 +73,13 @@ function Header() {
 
                 <Link to="/checkout" className="Link">
                     <div className="header__optionBasket">
-                        <ShoppingBasketIcon />
+                        <ShoppingCartIcon />
                         <span className="header__optionLine2 header__basketCount">
                             {basket?.length}
                         </span>
+                        <span className="header__optionLine2 cart" >
+                        Cart
+                    </span>
                     </div>
                 </Link>
 

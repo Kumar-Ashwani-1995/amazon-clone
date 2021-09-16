@@ -10,15 +10,18 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
     const [password, setPassword] = useState("");
+    const [signingIn,setSigningIn] = useState("");
     const signIn = (e) => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(email, password)
             .then(auth => {
-                history.push("/")
+                history.push("/");
+                
             })
             .catch(error => setError(error.message.split("Firebase:")[1]))
         setEmail("");
         setPassword("");
+        
     };
     const register = (e) => {
         e.preventDefault();
@@ -41,6 +44,7 @@ const Login = () => {
             <div className="login__container">
                 <h1>Sign-In</h1>
                 <small className="login__error">{error}</small>
+                {/* <small className="login__in">{signingIn}</small> */}
                 <form onSubmit={signIn}>
                     <h5>E-mail</h5>
                     <input value={email} name="email" id="email" type="text" onChange={(e) => { setEmail(e.target.value) }}></input>
