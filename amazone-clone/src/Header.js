@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Header.css"
 import SearchIcon from '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+// import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+// import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
@@ -73,7 +73,7 @@ function Header() {
 
                 <Link to="/checkout" className="Link">
                     <div className="header__optionBasket">
-                        <ShoppingCartIcon />
+                        <ShoppingCartIcon className="icon"/>
                         <span className="header__optionLine2 header__basketCount">
                             {basket?.length}
                         </span>

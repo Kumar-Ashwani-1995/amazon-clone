@@ -35,6 +35,11 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.user
             }
+         case "DELETE_BASKET":
+            return {
+                ...state,
+                basket: [],
+            }
 
         default:
             return state;
