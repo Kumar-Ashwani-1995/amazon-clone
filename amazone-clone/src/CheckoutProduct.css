@@ -21,6 +21,9 @@
   width: 180px;
   height: 180px;
 }
+.checkoutProduct__image:hover {
+  transform: scale(1.07);
+}
 
 .checkoutProduct__rating {
   display: flex;
@@ -39,4 +42,7 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
+}
+.checkoutProduct__add:hover {
+  transform: scale(1.07);
 }

@@ -60,7 +60,7 @@ const ViewProduct = () => {
             </div>
         
         <div className="viewProduct">
-            <div>
+            <div className="image__hover">
                 <img src={product.image} alt=""></img>
             </div>
             <div className="viewProduct__title">
