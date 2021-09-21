@@ -1,12 +1,15 @@
 import { Link ,useHistory} from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
 import CheckoutProduct from './CheckoutProduct';
 import "./Payment.css"
 import { useStateValue } from './StateProvider'
 import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from "./reducer"
+import cartEmpty from './asset/cartEmpty.png';
 
 const Payment = () => {
     const [{ basket,user }, dispatch] = useStateValue();
+    const [uniq,setUniq] = useState({});
     const history = useHistory();
     const payment = ()=>{
         dispatch({
@@ -16,6 +19,21 @@ const Payment = () => {
         history.push("/placedOrderPage");
         
     }
+     const findUnique = ()=>{
+        var tempResult = {}
+
+        for(let { id, image,price,rating,title } of basket)
+        tempResult[id] = { 
+            id, image,price,rating,title,
+            count: tempResult[id] ? tempResult[id].count + 1 : 1
+        }      
+
+        setUniq(Object.values(tempResult))
+        console.log(uniq)
+    }
+    useEffect(() => {
+       findUnique();
+    }, [basket])
     return (
         <div className="payment">
             <div className="payment__container">
@@ -37,7 +55,7 @@ const Payment = () => {
                         <h3> Review item and delivery</h3>
                     </div>
                     <div className="payment__items">
-                       { basket.map((product, index) =>
+                       <>{uniq.length ? uniq.map((product, index) =>
                         <div key={index}>
                             <CheckoutProduct
                                 id={product.id}
@@ -45,9 +63,16 @@ const Payment = () => {
                                 price={product.price}
                                 rating={product.rating}
                                 image={product.image}
+                                variable= {product.count}
                             ></CheckoutProduct>
                         </div>
-                    ) }
+                    ) :
+                        <div className="checkout__empty">
+
+                            <img src={cartEmpty} alt="Empty cart"></img>
+                            <h2 className="checkout__emptyText"> Your Amazon Basket is empty</h2>
+                        </div>
+                    }</>
                     </div>
                 </div>
                 <div className="payment__section">

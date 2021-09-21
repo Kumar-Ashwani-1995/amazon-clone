@@ -4,6 +4,7 @@ import "./ViewProduct.css"
 import base_url from './asset/bootapi'
 import axios from 'axios'
 import { useStateValue } from './StateProvider';
+import { BackupProduct } from './BackupProduct'
 
 const ViewProduct = () => {
         const [product,SetProduct] = useState({});
@@ -11,23 +12,27 @@ const ViewProduct = () => {
         useEffect(() => {
                 getProductDetails();
             }, [])
+    
 
     const getProductDetails = () =>{
         axios.get(`${base_url}/getOrder/${id}`).then(
             (response)=>{
                 console.log(response.data);
                 SetProduct(response.data);
+                
+                if(response.data === null || response.data ===""){
+                    SetProduct(BackupProduct.find(o => o.id === id));
+                }
             },
             (error)=>{
                 console.log(error);
-                SetProduct({});
+                SetProduct(BackupProduct.find(o => o.id === id));
                 
             }
         )
     }
  const [{ basket }, dispatch] = useStateValue();
 
-    console.log(basket);
     const addToBasket = () => {
         dispatch({
             type: "ADD_TO_BASKET",
@@ -67,11 +72,11 @@ const ViewProduct = () => {
                             <p key={i}>⭐</p>
                         ))}
                 </div>
-                <p className="viewProduct__price">
+                <span className="viewProduct__price">
                     <strong className="viewProduct__mrp"> MRP </strong>
                     <strong ><h2> ₹ </h2></strong>
                     <strong  className="viewProduct__amount"   ><h2> {product.price}</h2></strong>
-                </p>
+                </span>
                 <p className="viewProduct__instock"> In Stock </p>
                 <img className="viewProduct__sday" src={process.env.PUBLIC_URL+"/img/7day.jpg"} alt="7day return"></img>
                 

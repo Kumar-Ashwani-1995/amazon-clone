@@ -25,6 +25,9 @@ const Home = () => {
             (response)=>{
                 console.log(response.data);
                 SetHotProducts(response.data);
+                if(response.data === null || response.data ===""){
+                    SetHotProducts(HotProducts);
+                }
             },
             (error)=>{
                 console.log(error);
@@ -39,6 +42,9 @@ const Home = () => {
             (response)=>{
                 console.log(response.data);
                 SetProductCart(response.data);
+                if(response.data === null || response.data ===""){
+                    SetProductCart(HotProducts);
+                }
             },
             (error)=>{
                 console.log(error);
