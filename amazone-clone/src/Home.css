@@ -14,6 +14,22 @@
 .home__row {
   display: flex;
   z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
+}
+.home__srow {
+  width: 96.5%;
+  z-index: 1;
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .home__srow {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.home__product {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.home__hot {
+  display: flex;
 }

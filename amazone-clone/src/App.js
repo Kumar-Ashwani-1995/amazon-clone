@@ -1,6 +1,7 @@
 import './App.css';
 import Header from "./Header"
 import Home from './Home'
+import ViewProduct from './ViewProduct'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from './Checkout';
 import Login from './Login';
@@ -46,21 +47,22 @@ function App() {
             <Header></Header>
             <Payment></Payment>
             </div>
-            <FooterContainer></FooterContainer>
           </Route>
           <Route path="/placedOrderPage">
             <div className="body">
             <Header></Header>
             <OrderPlaced></OrderPlaced>
             </div>
-            <FooterContainer></FooterContainer>
           </Route>
           <Route path="/checkout">
             <div className="body">
             <Header></Header>
             <Checkout></Checkout>
             </div>
-            <FooterContainer></FooterContainer>
+          </Route>
+          <Route path="/product/:id" children={<><Header></Header><ViewProduct></ViewProduct></>}>
+             
+                      
           </Route>
           <Route path="/">
             <div className="body">

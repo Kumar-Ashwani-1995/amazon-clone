@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./Product.css";
 import { useStateValue } from './StateProvider';
 
@@ -21,7 +22,10 @@ const Product = ({ id, title, image, price, rating }) => {
     return (
         <div className="product">
             <div className="product__info">
-                <p> {title}</p>
+                <p>{id}</p>
+                <Link className="link" to={`/product/${id}`}>
+                <p> {title}</p></Link>
+                
                 <p className="product__price">
                     <small>INR</small>
                     <strong>{price}</strong>
@@ -34,7 +38,10 @@ const Product = ({ id, title, image, price, rating }) => {
                         ))}
                 </div>
             </div>
+            <Link className="link" to={`/product/${id}`}>
             <img className="product__image" src={image} alt=""></img>
+            </Link>
+            
             <button className="product__button" onClick={addToBasket} >Add to Basket</button>
 
         </div >
