@@ -4,6 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 // import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 // import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+import { AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
@@ -87,6 +88,28 @@ function Header() {
 
             </div>
         </div>
+                <div className="subheader">
+                   <div className="subheader__hamburger"> <AiOutlineMenu className="subheader__hamburgericon"/>
+                   <span className="subheader__text">
+                       ALL
+                       </span>
+                    </div>
+                   <div className="subheader__text">
+                        Home Appliances
+                   </div>
+                   <div className="subheader__text">
+                        Books
+                   </div>
+                   <div className="subheader__text">
+                        Kitchen Appliances
+                   </div>
+                   <div className="subheader__text">
+                        Clothing
+                   </div>
+                   <div className="subheader__text">
+                        Toys
+                   </div>
+                </div>
     </>
     )
 }

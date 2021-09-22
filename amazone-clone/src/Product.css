@@ -30,6 +30,7 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  cursor: pointer;
 }
 
 .product__price {
@@ -41,4 +42,11 @@
 }
 .link {
   text-decoration: none;
+}
+.product__hot {
+  color: #f0c14b;
+  float: right;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }

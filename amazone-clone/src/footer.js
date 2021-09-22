@@ -14,7 +14,7 @@ export function FooterContainer() {
                 <a className="footer__innerContent" href="#">Social</a>
                 <Link to="/">
                 
-                <img className="header__logo"  src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="AmaZon.com"></img>
+                <img className="footer__logo"  src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="AmaZon.com"></img>
                 </Link>
             </span>
             

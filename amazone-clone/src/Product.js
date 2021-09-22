@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import "./Product.css";
 import { useStateValue } from './StateProvider';
+import { AiFillFire } from "react-icons/ai";
 
-const Product = ({ id, title, image, price, rating }) => {
+const Product = ({ id, title, image, price, rating , hotProd}) => {
 
     const [{ basket }, dispatch] = useStateValue();
 
@@ -22,7 +23,7 @@ const Product = ({ id, title, image, price, rating }) => {
     return (
         <div className="product">
             <div className="product__info">
-                <p>{id}</p>
+                {hotProd?<span ><AiFillFire className="product__hot"/> </span>:<></>}
                 <Link className="link" to={`/product/${id}`}>
                 <p> {title}</p></Link>
                 

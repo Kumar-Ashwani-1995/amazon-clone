@@ -10,15 +10,17 @@
 .buttonStyle {
   width: 100%;
   height: 30px;
-
-  background: #54595f;
+  color: white;
+  background: #263747;
 }
-.header__logo {
+.footer__logo {
   margin-top: -0px;
-  height: 20px;
+  margin-left: 20px;
+  height: 30px;
   width: 70px;
 }
 .footer__inner {
+  margin-top: 10px;
   display: flex;
 }
 .footer__innerContent {

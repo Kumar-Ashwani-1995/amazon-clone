@@ -7,10 +7,18 @@
   top: 0;
   z-index: 100;
 }
-
+.subheader {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #263747;
+  margin-bottom: 16px;
+  top: 0;
+  z-index: 100;
+}
 .header__logo {
-  width: 100px;
-  object-fit: contain;
+  width: 120px;
+  height: 50px;
   margin: 0 25px;
   margin-top: 18px;
   margin-left: 38px;
@@ -74,4 +82,22 @@
 }
 .Link {
   text-decoration: none;
+}
+.subheader__hamburger {
+  display: flex;
+}
+.subheader__hamburgericon {
+  color: white;
+  margin-left: 10px;
+  height: 29px;
+  width: 30px;
+  cursor: pointer;
+}
+.subheader__text {
+  margin-top: 10px;
+  margin-right: 25px;
+  color: white;
+  height: 25px;
+
+  cursor: pointer;
 }
